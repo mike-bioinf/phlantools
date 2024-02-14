@@ -1,0 +1,14 @@
+Package: phlantools
+Type: Package
+Title: Tools for performing common procedures on metagenomic "phlan" software-derived datasets
+Version: 0.1.0
+Author: person("Michele", "Avagliano", email = "avaglianomichele@outlook.it", role = c("aut", "cre"))
+Maintainer: Michele Avagliano <avaglianomichele@outlook.it>
+Description: This package contains functions that simplify the execution of common operations
+  done on metagenomic "phlan" data (e.g. metaphaln profiles).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr (>= 1.1.2)
