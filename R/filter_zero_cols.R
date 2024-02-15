@@ -6,7 +6,7 @@
 #'
 #' @param df Dataframe to filter.
 #'
-#' @return The function returns the filtered dataframe
+#' @return The function returns the filtered dataframe.
 #' @export
 
 

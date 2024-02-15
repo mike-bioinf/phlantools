@@ -9,6 +9,10 @@ divide_numeric_cols(df)
 \arguments{
 \item{df}{Dataframe to be splitted.}
 }
+\value{
+List of thow dataframes: df_num and df_other. If the orginal df is comprised of
+only numeric columns, then df_other is a dataframe with 0 rows and columns.
+}
 \description{
 Internal function used for splitting a dataframe in a list of 2 dataframes:
 one made of numeric columns and the other made of other types columns.

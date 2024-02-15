@@ -10,7 +10,7 @@ filter_zero_cols(df)
 \item{df}{Dataframe to filter.}
 }
 \value{
-The function returns the filtered dataframe
+The function returns the filtered dataframe.
 }
 \description{
 The function filter the numeric columns of only zero values. The non-numeric

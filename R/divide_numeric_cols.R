@@ -4,6 +4,8 @@
 #' one made of numeric columns and the other made of other types columns.
 #'
 #' @param df Dataframe to be splitted.
+#' @return List of thow dataframes: df_num and df_other. If the orginal df is comprised of
+#' only numeric columns, then df_other is a dataframe with 0 rows and columns.
 
 
 divide_numeric_cols <- function(df){
