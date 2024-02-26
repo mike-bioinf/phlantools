@@ -3,20 +3,23 @@
 \name{check_functions}
 \alias{check_functions}
 \alias{check_meta_species_table}
+\alias{check_df}
 \alias{check_sampleid_column}
 \alias{check_table_format}
 \title{Checks for metaphlan derived datasets}
 \usage{
 check_meta_species_table(df)
 
+check_df(df)
+
 check_sampleid_column(df)
 
 check_table_format(df)
 }
 \arguments{
-\item{df}{Dataframe to inspect.}
+\item{df}{dataframe to inspect.}
 }
 \description{
-Set of internal functions to check whether the dataset is subset to species level,
+Set of internal functions to check whether the dataset is a dataframe, is subset to species level,
 has a sampleid column and the format (respectively).
 }

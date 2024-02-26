@@ -1,21 +1,17 @@
 #' @title Filter numeric columns containing only zero values
 #'
 #' @description
-#' The function filter the numeric columns of only zero values. The non-numeric
-#' columns are not touched and collected at beginning of the dataset.
+#' The function filter the numeric columns that consist of only zero values. The non-numeric
+#' columns are not touched and collected at the beginning of the dataset.
 #'
-#' @param df Dataframe to filter.
+#' @param df dataframe to filter.
 #'
 #' @return The function returns the filtered dataframe.
 #' @export
 
-
 filter_zero_cols <- function(df){
 
-  if(!is.data.frame(df)){
-    stop("df must be of class dataframe")
-  }
-
+  df <- check_df(df)
   splitted <- divide_numeric_cols(df = df)
   df_num <- splitted$df_num
   df_filtered <- df_num[, colSums(df_num) != 0]

@@ -3,10 +3,10 @@
 #'
 #' @description
 #'
-#' Set of internal functions to check whether the dataset is subset to species level,
+#' Set of internal functions to check whether the dataset is a dataframe, is subset to species level,
 #' has a sampleid column and the format (respectively).
 #'
-#' @param df Dataset to inspect.
+#' @param df dataframe to inspect.
 #'
 check_meta_species_table <- function(df){
   if(!all(grepl(pattern = "s__", x = colnames(df)))){
@@ -16,6 +16,23 @@ check_meta_species_table <- function(df){
 
 
 
+#' Check if df is a dataframe, if not tries to convert to it.
+#' @param df object to inspect
+#' @rdname check_functions
+#'
+check_df <- function(df){
+  if(is.matrix(df)){
+    df <- as.data.frame(df)
+  }
+
+  if(!is.data.frame(df)){
+    stop("df must be of class dataframe")
+  }
+
+  return(df)
+}
+
+
 
 #'  Check sampleid column in metaphlan derived table.
 #' Internal function that check if a sampleid column is present based on popular
@@ -23,7 +40,7 @@ check_meta_species_table <- function(df){
 #' removed from the dataset and returned in the list. On the contrary a NULL value
 #' is reported.
 #'
-#' @param df Dataframe to inspect.
+#' @param df dataframe to inspect.
 #' @rdname check_functions
 #'
 check_sampleid_column <- function(df){
@@ -47,9 +64,8 @@ check_sampleid_column <- function(df){
 #' relative abundance or percentage relative abundance. These checks are simply
 #' made based on expected values limits in the different cases.
 #'
-#' @param df Dataframe to inspect.
+#' @param df dataframe to inspect.
 #' @rdname check_functions
-#'
 check_table_format <- function(df){
 
   if(any(df > 1)){

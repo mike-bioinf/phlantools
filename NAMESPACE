@@ -2,4 +2,5 @@
 
 export(filter_notzero_perc_cols)
 export(filter_zero_cols)
-import(dplyr)
+export(get_presence_perc)
+export(get_presence_perc_cat)

@@ -9,23 +9,27 @@ filter_notzero_perc_cols(
   thresh_perc,
   thresh_equal = FALSE,
   min_abn_value = 0,
-  min_abn_equal = FALSE
+  min_abn_equal = FALSE,
+  ...
 )
 }
 \arguments{
-\item{df}{Dataframe to filter.}
+\item{df}{dataframe to filter (or matrix coerced to df).}
 
 \item{thresh_perc}{numeric; percentage threshold of not null values below the which
-the microorganism is discarded}
+the feature is discarded.}
 
 \item{thresh_equal}{logical (default FALSE); whether the threshold must be
-strictly surpassed (FALSE) or at least equalized (TRUE) by the microorganism to be kept.}
+strictly surpassed (FALSE) or at least equalized (TRUE) by the feature to be kept.}
 
-\item{min_abn_value}{Minimum abundance value (in percentage, e.g 5 --> means 5\%) that
+\item{min_abn_value}{Minimum abundance value (intended in percentage, e.g 5 --> means 5\%) that
 define the presence or absence of a microorganism.}
 
 \item{min_abn_equal}{logical (Default FALSE); whether the microorganism abundance
-must be strictly greater (TRUE) or at least equal (FALSE) to the cutoff to be considered present.}
+must be strictly greater (FALSE) or at least equal (TRUE) to the cutoff to be considered present.}
+
+\item{...}{needed to pass additional argument do_check in order to block or not "format" values checking
+useful in case of microbial abundances data.}
 }
 \value{
 The function returns the filtered dataframe.
@@ -33,22 +37,23 @@ The function returns the filtered dataframe.
 \description{
 The function allows to filter columns for which the number of not-null values
 don't satisfy a minimum percentage threshold. In addition it's possible to set
-a minimum abn (interpreted as a percentage value) for which the values are considered
-not-null. Sometimes this is desired because low-abundant microorganisms have no
-biological meaning or effects.
+a minimum abundance value (intended as a percentage relative value for microorganisms data)
+for which the values are considered not-null. Sometimes this is desired because
+low-abundant microorganisms have no biological meaning or effects.
 }
 \examples{
 
-## In this example the relative abundances values inferior and equal to 1.5 (a.k.a 1.5\%)
+## In this example the relative abundance values inferior or equal to 1.5 (a.k.a 1.5\%)
 ## are considered zero. Only the features (microorganisms) for which the percentages
 ## of not-null values are at least the 10\% of the total number of values are kept.
 
 mpa_table <- phlantools::mpa_complete
+
 df_filtered <- filter_notzero_perc_cols(df = mpa_table,
-                                         min_abn_value = 1.5,
-                                         min_abn_equal = FALSE,
-                                         thresh_perc = 10,
-                                         thresh_equal = TRUE
+                                        min_abn_value = 1.5,
+                                        min_abn_equal = FALSE,
+                                        thresh_perc = 10,
+                                        thresh_equal = TRUE
                                         )
 
 }

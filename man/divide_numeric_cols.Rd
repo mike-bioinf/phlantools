@@ -7,7 +7,7 @@
 divide_numeric_cols(df)
 }
 \arguments{
-\item{df}{Dataframe to be splitted.}
+\item{df}{dataframe or matrix to eventually split.}
 }
 \value{
 List of thow dataframes: df_num and df_other. If the orginal df is comprised of

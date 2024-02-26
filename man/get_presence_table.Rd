@@ -4,21 +4,31 @@
 \alias{get_presence_table}
 \title{Internal function to obtain a presence/absence table from an abundance table}
 \usage{
-get_presence_table(df, min_abn_value = 0, min_abn_equal = FALSE)
+get_presence_table(
+  df,
+  min_abn_value = 0,
+  min_abn_equal = FALSE,
+  do_check = TRUE
+)
 }
 \arguments{
 \item{df}{Dataframe from which obtain the presence/absence table.}
 
 \item{min_abn_value}{numeric value. Sometimes only abundance values greater than a minimum value
-have to be considered as presence. This value MUST be specified as percentage value (e.g 5 --> that means 5\%).}
+have to be considered as presence. This value is intended as a percentage value for microbial abundances
+(e.g 5 means 5\% for relative abundances).}
 
 \item{min_abn_equal}{logical (default FALSE); if a value must be equal or greater (TRUE) or
 strictly greater (FALSE) than the min_abn_value to be considered a presence.}
+
+\item{do_check}{logical (default TRUE); whether to check for relative abundances values useful
+in case of microbial data.}
 }
 \value{
-The function returns the presence/absence table.
+The function returns the presence/absence table as LOGICAL table (i.e. presence is
+encoded as 1 and absence as 0).
 }
 \description{
-The function checks the format of the abundances table based simply on expectation
+The function checks the format of the abundances table simply on expectation
 about its values and takes action accordingly.
 }
