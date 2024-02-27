@@ -55,7 +55,7 @@ get_presence_perc_cat <- function(df, cat_var, min_abn_value = 0, min_abn_equal 
     }
 
     d <- purrr::keep(d, is.numeric)
-    log_table <- get_presence_table(d, ...)
+    log_table <- get_presence_table(d, min_abn_value = min_abn_value, min_abn_equal = min_abn_equal, ...)
     perc_values <- colSums(log_table)/num_rows * 100
   }))
 }

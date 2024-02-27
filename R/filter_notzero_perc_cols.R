@@ -8,16 +8,22 @@
 #' low-abundant microorganisms have no biological meaning or effects.
 #'
 #'
-#' @param df dataframe to filter (or matrix coerced to df).
-#' @param thresh_perc numeric; percentage threshold of not null values below the which
+#' @param df
+#'  dataframe to filter (or matrix coerced to df).
+#' @param thresh_perc
+#'  Numeric; percentage threshold of not null values below the which
 #'  the feature is discarded.
-#' @param thresh_equal logical (default FALSE); whether the threshold must be
+#' @param thresh_equal
+#'  Logical (default FALSE); whether the threshold must be
 #'  strictly surpassed (FALSE) or at least equalized (TRUE) by the feature to be kept.
-#' @param min_abn_value Minimum abundance value (intended in percentage, e.g 5 --> means 5%) that
-#' define the presence or absence of a microorganism.
-#' @param min_abn_equal logical (Default FALSE); whether the microorganism abundance
+#' @param min_abn_value
+#'  Minimum abundance value (intended in percentage, e.g 5 --> means 5%) that
+#'  define the presence or absence of a microorganism.
+#' @param min_abn_equal
+#'  Logical (Default FALSE); whether the microorganism abundance
 #'  must be strictly greater (FALSE) or at least equal (TRUE) to the cutoff to be considered present.
-#' @param ... needed to pass additional argument do_check in order to block or not "format" values checking
+#' @param ...
+#'  Needed to pass additional argument do_check in order to block or not "format" values checking
 #'  useful in case of microbial abundances data.
 #'
 #'

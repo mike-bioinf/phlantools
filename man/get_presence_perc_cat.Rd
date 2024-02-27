@@ -25,12 +25,12 @@ have to be considered as presence. This value is intended as a percentage value 
 (e.g 5 means 5\% in relative abundances).}
 
 \item{min_abn_equal}{Logical (default FALSE); if a value must be equal or greater (TRUE) or
-strictly greater (FALSE) than the min_abn_value to be considered a presence.}
+strictly greater (FALSE) than the min_abn_value to be considered as a presence.}
 
 \item{perc_on_all}{Logical (default FALSE); if the percentages must be computed on the total
-number of rows/observations of the dataframe (TRUE) or on the number of observations for each group (FALSE).}
+number of rows/observations of the dataframe (TRUE) or on the number of observations of each group (FALSE).}
 
-\item{...}{Needed to pass additional argument do_check in order to block or not "format" values checking
+\item{...}{Needed to pass the additional argument 'do_check' that allows to block or not "format values checking",
 useful in case of microbial abundances data.}
 }
 \value{

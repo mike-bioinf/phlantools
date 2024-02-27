@@ -8,9 +8,9 @@
 #'
 #' @param df dataframe to inspect.
 #'
-check_meta_species_table <- function(df){
+check_species <- function(df){
   if(!all(grepl(pattern = "s__", x = colnames(df)))){
-    message("some columns are not referring to species ('s__'): do you forget to subset the dataset?")
+    message("some microorganisms are not at species level ('s__'): do you forget to subset the dataset?")
   }
 }
 
@@ -34,7 +34,7 @@ check_df <- function(df){
 
 
 
-#'  Check sampleid column in metaphlan derived table.
+#' Check sampleid column in metaphlan derived table.
 #' Internal function that check if a sampleid column is present based on popular
 #' choices of names for this kind of data. If the column is indeed present it is
 #' removed from the dataset and returned in the list. On the contrary a NULL value

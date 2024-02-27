@@ -14,7 +14,7 @@ get_presence_table(
 \arguments{
 \item{df}{Dataframe from which obtain the presence/absence table.}
 
-\item{min_abn_value}{numeric value. Sometimes only abundance values greater than a minimum value
+\item{min_abn_value}{Numeric value. Sometimes only abundance values greater than a minimum value
 have to be considered as presence. This value is intended as a percentage value for microbial abundances
 (e.g 5 means 5\% for relative abundances).}
 

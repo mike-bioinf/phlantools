@@ -2,13 +2,13 @@
 % Please edit documentation in R/check_functions.R
 \name{check_functions}
 \alias{check_functions}
-\alias{check_meta_species_table}
+\alias{check_species}
 \alias{check_df}
 \alias{check_sampleid_column}
 \alias{check_table_format}
 \title{Checks for metaphlan derived datasets}
 \usage{
-check_meta_species_table(df)
+check_species(df)
 
 check_df(df)
 

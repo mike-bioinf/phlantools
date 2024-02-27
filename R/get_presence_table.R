@@ -4,7 +4,7 @@
 #' about its values and takes action accordingly.
 #'
 #' @param df Dataframe from which obtain the presence/absence table.
-#' @param min_abn_value numeric value. Sometimes only abundance values greater than a minimum value
+#' @param min_abn_value Numeric value. Sometimes only abundance values greater than a minimum value
 #'  have to be considered as presence. This value is intended as a percentage value for microbial abundances
 #'  (e.g 5 means 5% for relative abundances).
 #' @param min_abn_equal logical (default FALSE); if a value must be equal or greater (TRUE) or
@@ -37,9 +37,8 @@ get_presence_table <- function(df, min_abn_value = 0, min_abn_equal = FALSE, do_
                To block the check and subsequent changes pass the argument do_check = FALSE")
       df_checked <- df * 100
     } else if(any(df > 100.1)){
-      stop("The df's values are interpreted as counts (there is a value greater than 100):
-           convert to relative abundances to go on.
-           To block the check and subsequent changes pass the argument do_check = FALSE")
+      stop("The df's values are interpreted as counts (there is a value greater than 100): convert to relative abundances to go on.
+           To block the check pass the argument do_check = FALSE")
     } else {
       df_checked <- df
     }

@@ -30,7 +30,13 @@ get_presence_perc <- function(df, min_abn_value = 0, min_abn_equal = FALSE, ...)
   df <- check_df(df)
   splitted <- divide_numeric_cols(df)
   df_num <- splitted$df_num
-  log_table <- get_presence_table(df_num, ...)
+
+  log_table <- get_presence_table(df_num,
+                                  min_abn_value = min_abn_value,
+                                  min_abn_equal = min_abn_equal,
+                                  ...
+                                  )
+
   prevalence_vector <- colSums(log_table)/nrow(df) * 100
 }
 

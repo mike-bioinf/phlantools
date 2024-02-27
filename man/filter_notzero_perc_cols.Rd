@@ -16,19 +16,19 @@ filter_notzero_perc_cols(
 \arguments{
 \item{df}{dataframe to filter (or matrix coerced to df).}
 
-\item{thresh_perc}{numeric; percentage threshold of not null values below the which
+\item{thresh_perc}{Numeric; percentage threshold of not null values below the which
 the feature is discarded.}
 
-\item{thresh_equal}{logical (default FALSE); whether the threshold must be
+\item{thresh_equal}{Logical (default FALSE); whether the threshold must be
 strictly surpassed (FALSE) or at least equalized (TRUE) by the feature to be kept.}
 
 \item{min_abn_value}{Minimum abundance value (intended in percentage, e.g 5 --> means 5\%) that
 define the presence or absence of a microorganism.}
 
-\item{min_abn_equal}{logical (Default FALSE); whether the microorganism abundance
+\item{min_abn_equal}{Logical (Default FALSE); whether the microorganism abundance
 must be strictly greater (FALSE) or at least equal (TRUE) to the cutoff to be considered present.}
 
-\item{...}{needed to pass additional argument do_check in order to block or not "format" values checking
+\item{...}{Needed to pass additional argument do_check in order to block or not "format" values checking
 useful in case of microbial abundances data.}
 }
 \value{
