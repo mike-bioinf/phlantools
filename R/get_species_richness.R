@@ -26,10 +26,8 @@
 #'
 #' @export
 #' @examples
-#'
-#'
-#' mpa_complete <- phlantools::mpa_complete
-#' richness_df <- get_species_richness(df = mpa_complete, margin = 2)
+#'  mpa_complete <- phlantools::mpa_complete
+#'  richness_df <- get_species_richness(df = mpa_complete, margin = 2)
 #'
 #' ## The function will return a message highlighting that also taxa not identified
 #' ## to species level are present and therefore used for the computation of the index.

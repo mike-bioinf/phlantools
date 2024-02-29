@@ -26,7 +26,7 @@
 #'  of features (the pattern "s__" is sought). In the presence of features not defined as species,
 #'  or without the scheme encoded by 'letter + __', the function may produce unexpected results.
 #'
-#'
+#' @export
 #' @return The function returns the dataframe with the adjusted names.
 
 
