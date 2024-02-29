@@ -36,10 +36,8 @@ in case of margin = 2, or the names of columns in case of margin = 1.
 The function allow to compute the species richness index.
 }
 \examples{
-
-
-mpa_complete <- phlantools::mpa_complete
-richness_df <- get_species_richness(df = mpa_complete, margin = 2)
+ mpa_complete <- phlantools::mpa_complete
+ richness_df <- get_species_richness(df = mpa_complete, margin = 2)
 
 ## The function will return a message highlighting that also taxa not identified
 ## to species level are present and therefore used for the computation of the index.

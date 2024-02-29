@@ -20,12 +20,12 @@ is kept).}
 
 \item{split_pattern}{strsplit regex (default "\\."). The function internally uses strsplit to divide
 the columns names of the dataframe based on the specified pattern, and to select
-the first unambiguous part. Give more control and options to deal with
+the first unambiguous part. Option useful to have more control and options to deal with
 different "taxonomic format".}
 
-\item{do_check_species}{Logical (default TRUE). An option to allow or block the checking of the taxonomical
-level of features (the pattern "s__" is sought). In the presence of features not defined as species,
-the function may produce unexpected results}
+\item{do_check_species}{Logical (default TRUE). An option to allow or block the taxonomic level checking
+of features (the pattern "s__" is sought). In the presence of features not defined as species,
+or without the scheme encoded by 'letter + __', the function may produce unexpected results.}
 }
 \value{
 The function returns the dataframe with the adjusted names.
