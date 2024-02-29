@@ -5,7 +5,7 @@
 \alias{mpa_complete}
 \title{Metaphlan table with all taxonomies}
 \format{
-A data frame containing taxonomic information from Metaphlan analysis.
+A data frame containing taxonomic information from Metaphlan software.
 It contains 20 rows and 100 columns, of which one report the samples id.
 }
 \usage{

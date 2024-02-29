@@ -42,3 +42,6 @@ The function allows to compute the percentage presences of all numeric columns,
 in conjunction with a minimum cutoff of presence/absence, all in respect to the
 levels of a factor variable.
 }
+\examples{
+## See the documentation of get_presence_perc.
+}

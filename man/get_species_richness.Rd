@@ -25,7 +25,7 @@ have to be considered as presence. This value is intended as a percentage value 
 \item{min_abn_equal}{logical (default FALSE); if a value must be equal or greater (TRUE) or
 strictly greater (FALSE) than the min_abn_value to be considered a presence.}
 
-\item{...}{Needed to pass additional argument do_check in order to block or not "format" values checking
+\item{...}{Needed to pass the additional argument do_check in order to block or not "format" values checking
 useful in case of microbial abundances data.}
 }
 \value{

@@ -28,7 +28,7 @@
 #'  The cells report the percentage values.
 #'
 #' @export
-# ## see the documentation of get_presence_perc.
+#' @examples ## See the documentation of get_presence_perc.
 
 get_presence_perc_cat <- function(df, cat_var, min_abn_value = 0, min_abn_equal = FALSE, perc_on_all = FALSE, ...){
 

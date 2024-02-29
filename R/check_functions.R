@@ -2,15 +2,26 @@
 #' @title Checks for metaphlan derived datasets
 #'
 #' @description
-#'
 #' Set of internal functions to check whether the dataset is a dataframe, is subset to species level,
 #' has a sampleid column and the format (respectively).
 #'
 #' @param df dataframe to inspect.
 #'
-check_species <- function(df){
+check_species_message <- function(df){
   if(!all(grepl(pattern = "s__", x = colnames(df)))){
-    message("some microorganisms are not at species level ('s__'): do you forget to subset the dataset?")
+    message("Some microorganisms are not at species level ('s__'): do you forget to subset the dataset?")
+  }
+}
+
+
+
+#' Check if there are non species columns in df and returns an error
+#' @param df object to inspect
+#' @rdname check_functions
+#'
+check_species_error <- function(df){
+  if(!all(grepl(pattern = "s__", x = colnames(df)))){
+    stop("Some microorganisms are not at species level ('s__'). The function can give unexpected results. \n  To more information check the documentation.")
   }
 }
 
@@ -48,14 +59,13 @@ check_sampleid_column <- function(df){
     sample_pos <- grep(pattern = "^sample|^SAMPLE|^Sample|ID$", x = colnames(df))
     sample_col <- df[, sample_pos]
     df <- df[, -sample_pos]
-    message("sampleid column identified: this will be treated separately")
+    message("Sampleid column identified: this will be treated separately")
   } else {
     sample_col <- NULL
   }
 
   return(list(df = df, sample_col = sample_col))
 }
-
 
 
 

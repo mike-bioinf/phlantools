@@ -17,7 +17,7 @@
 #'  logical (default FALSE); if a value must be equal or greater (TRUE) or
 #'  strictly greater (FALSE) than the min_abn_value to be considered a presence.
 #' @param ...
-#'  Needed to pass additional argument do_check in order to block or not "format" values checking
+#'  Needed to pass the additional argument do_check in order to block or not "format" values checking
 #'  useful in case of microbial abundances data.
 #'
 #' @return
@@ -53,7 +53,7 @@ get_species_richness <- function(df, margin = 2, min_abn_value = 0, min_abn_equa
     }
   }
 
-  check_species(df)
+  check_species_message(df)
   splitted <- divide_numeric_cols(df)
   df_num <- splitted$df_num
   df_other <- splitted$df_other
